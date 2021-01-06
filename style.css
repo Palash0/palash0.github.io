@@ -1,0 +1,22 @@
+.title {
+    position: relative;
+    font-size: 3em;
+}
+
+#header {
+    font-size: 2em;
+}
+
+#name {
+    margin: 1em;
+}
+
+#container {
+    margin-top: 10em;
+    margin-left: 10em;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
