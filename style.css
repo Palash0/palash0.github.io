@@ -1,18 +1,50 @@
 .title {
     position: relative;
-    font-size: 4em;
+    font-size: 3em;
+    margin-left: 20%;
 }
 
 #header {
     font-size: 2em;
-    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    grid-row: 1;
 }
 
 #name {
     margin: 1em;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+@media (min-width: 900px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+    .title { 
+        margin-left: 10%;
+        font-size: 4em;
+    };
+}
+
+@media (max-width: 900px) {
+    #amongus {
+        transform: scale(0.5);
+    }
+
+
+}
+
 #container {
-    margin-top: 10em;
-    margin-left: 10em;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#amongus {
+    grid-column: 2;
+    grid-row: 2;
 }
