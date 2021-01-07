@@ -1,7 +1,6 @@
 .title {
     position: relative;
     font-size: 3em;
-    margin-left: 20%;
 }
 
 #header {
@@ -10,23 +9,31 @@
     background-color: white;
     z-index: 999;
     grid-row: 1;
+    grid-column: 1/-1;
 }
 
 #name {
+    position: relative;
+    float: left;
+    margin: 1em;
+}
+
+#resume {
+    position: relative;
+    float: right;
     margin: 1em;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 7%;
     grid-auto-rows: minmax(100px, auto);
 }
 
 @media (min-width: 900px) {
-    .grid-container { grid-template-columns: repeat(2, 1fr); }
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
     .title { 
-        margin-left: 10%;
         font-size: 4em;
     };
 }
@@ -36,15 +43,26 @@
         transform: scale(0.5);
     }
 
-
+    #container {
+        width: 100%;
+        text-align: center;
+        margin: 0 !important;
+    }
 }
 
 #container {
-    grid-column: 1;
+    grid-column: 1/-1;
     grid-row: 2;
+    margin-left: 5%;
+
 }
 
 #amongus {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 12;
+    grid-row: 1;
+}
+
+.no-style {
+    text-decoration: none;
+    color: black;
 }
