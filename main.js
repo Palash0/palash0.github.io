@@ -1,6 +1,8 @@
 var texts = [];
-var n = 2;
+var n = 4;
 
+// TODO: change crewmate color everytime
+// TODO: add more sections
 
 document.addEventListener("DOMContentLoaded", function(event) {
     for(var i = 1; i <= n; ++i) {
@@ -41,9 +43,11 @@ window.addEventListener('scroll', function() {
         if (i % 2 == 0) {
             // move right
             texts[i].style.left = delta(ratio) * window.innerWidth;
+            texts[i].style['transform'] = "skewX(-" + ratio * 20 + "deg)";
         } else {
             // move left
             texts[i].style.right = delta(ratio) * window.innerWidth;
+            texts[i].style['transform'] = "skewX(" + ratio * 20 + "deg)";
         }
     }
 
@@ -51,5 +55,5 @@ window.addEventListener('scroll', function() {
 });
 
 function delta(progress) {
-    return progress * progress * progress;
+    return 1.5 * progress * progress * progress;
 }
