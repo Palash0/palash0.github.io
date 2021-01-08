@@ -58,7 +58,7 @@ function handleAnimations() {
 
 
 window.addEventListener('scroll', function() {
-    var scrollY = window.pageYOffset % window.innerHeight;
+    var scrollY = (window.innerHeight + window.pageYOffset) % window.innerHeight;
     var ratio = 0.03 + scrollY / window.innerHeight;
 
     for(var i = 0; i < n; ++i) {
@@ -79,8 +79,6 @@ window.addEventListener('scroll', function() {
 function delta(progress) {
     return 1.5 * progress * progress * progress;
 }
-
-
 
 function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
