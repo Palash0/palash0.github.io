@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         texts.push(document.getElementById('text' + i.toString()));
     }
 
-    var interval = window.setInterval(handleAnimations, 10);
+    var interval = window.setInterval(handleAnimations, 5);
     var media = window.matchMedia("(max-width: 900px)");
     handleResponsive(media);
     media.addListener(handleResponsive);
@@ -39,6 +39,7 @@ function handleAnimations() {
         if (pos / 2 >= window.innerWidth) {
             console.log("entered");
             pos = -2 * crew.clientWidth;
+            setRandomColor();
         }
 
         // console.log(moveSine(pos));
@@ -76,4 +77,24 @@ window.addEventListener('scroll', function() {
 
 function delta(progress) {
     return 1.5 * progress * progress * progress;
+}
+
+function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+  }
+
+function setRandomColor() {
+    var colors = [
+            { base: "#132ed1", shade: "#09158e" },
+            { base: "#d6e0f0", shade: "#8394bf" },
+            { base: "#3f474e", shade: "#1e1f26" },
+            { base: "#38fedc", shade: "#24a8be" },
+            { base: "#c51111", shade: "#7a0838"}
+    ];
+
+    var color = choose(colors);
+
+    document.documentElement.style.setProperty('--base-color', color.shade);
+    document.documentElement.style.setProperty('--lighter-base-color', color.base);
 }

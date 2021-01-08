@@ -66,3 +66,7 @@
     text-decoration: none;
     color: black;
 }
+
+.page {
+    height: 100%;
+}
