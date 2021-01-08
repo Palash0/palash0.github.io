@@ -6,7 +6,6 @@
 .header {
     font-size: 2em;
     width: 100%;
-    background-color: white;
     z-index: 999;
     grid-row: 1;
     grid-column: 1/-1;
@@ -64,4 +63,8 @@
 
 .page {
     height: 100%;
+}
+
+body {
+    background-color: #e2e1c9;
 }

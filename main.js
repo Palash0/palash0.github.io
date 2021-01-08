@@ -1,10 +1,9 @@
 var texts = [];
-var n = 4;
+var n = 8;
 var pos = 0;
 
 
-// TODO: change crewmate color everytime
-// TODO: add more sections
+// TODO: make other page work
 
 document.addEventListener("DOMContentLoaded", function(event) {
     for(var i = 1; i <= n; ++i) {
@@ -59,7 +58,8 @@ function handleAnimations() {
 
 
 window.addEventListener('scroll', function() {
-    var ratio = 0.03 + window.pageYOffset / window.innerHeight;
+    var scrollY = window.pageYOffset % window.innerHeight;
+    var ratio = 0.03 + scrollY / window.innerHeight;
 
     for(var i = 0; i < n; ++i) {
         if (i % 2 == 0) {
@@ -79,6 +79,8 @@ window.addEventListener('scroll', function() {
 function delta(progress) {
     return 1.5 * progress * progress * progress;
 }
+
+
 
 function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
