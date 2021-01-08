@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         texts.push(document.getElementById('text' + i.toString()));
     }
 
-    var interval = window.setInterval(handleAnimations, 5);
+    var interval = window.setInterval(handleAnimations, 10);
     var media = window.matchMedia("(max-width: 900px)");
     handleResponsive(media);
     media.addListener(handleResponsive);
