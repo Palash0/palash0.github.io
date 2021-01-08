@@ -3,7 +3,7 @@
     font-size: 3em;
 }
 
-#header {
+.header {
     font-size: 2em;
     width: 100%;
     background-color: white;
@@ -12,7 +12,7 @@
     grid-column: 1/-1;
 }
 
-#name {
+.name {
     position: relative;
     float: left;
     margin: 1em;
@@ -39,14 +39,14 @@
 }
 
 @media (max-width: 900px) {
-    #amongus {
-        transform: scale(0.5);
-    }
-
     #container {
         width: 100%;
         text-align: center;
         margin: 0 !important;
+    }
+
+    #amongus {
+        margin-top: 1em;
     }
 }
 
@@ -55,11 +55,6 @@
     grid-row: 2;
     margin-left: 5%;
 
-}
-
-#amongus {
-    grid-column: 12;
-    grid-row: 1;
 }
 
 .no-style {

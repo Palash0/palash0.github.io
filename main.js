@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for(var i = 1; i <= n; ++i) {
         texts.push(document.getElementById('text' + i.toString()));
     }
+    setRandomColor();
 
     var interval = window.setInterval(handleAnimations, 10);
     var media = window.matchMedia("(max-width: 900px)");
@@ -20,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function handleResponsive(media) {
     if (media.matches) {
         // less than 900px
-        var header = document.getElementById("name");
+        var header = document.getElementById("title-name");
         header.innerHTML = "PT";
     } else {
-        var header = document.getElementById("name");
+        var header = document.getElementById("title-name");
         header.innerHTML = "Palash Taneja   ";
     }
 }
