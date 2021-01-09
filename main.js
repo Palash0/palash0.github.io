@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     texts = document.getElementsByClassName("text");
     setRandomColor();
 
-    var interval = window.setInterval(handleAnimations, 10);
+    var ANIMATION_SPEED = 10;
+    var interval = window.setInterval(handleAnimations, ANIMATION_SPEED);
     var media = window.matchMedia("(max-width: 900px)");
     handleResponsive(media);
     media.addListener(handleResponsive);
@@ -36,7 +37,7 @@ function handleAnimations() {
 
         if (pos / 2 >= window.innerWidth) {
             console.log("entered");
-            pos = -2 * crew.clientWidth;
+            pos = - crew.clientWidth;
             setRandomColor();
         }
 
@@ -75,7 +76,7 @@ window.addEventListener('scroll', function() {
     for(var i = 0; i < text2.length; ++i) {
         if (i % 2 == 0) {
             // move left
-            
+
         }
     }
 
