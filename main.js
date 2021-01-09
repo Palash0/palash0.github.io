@@ -3,7 +3,6 @@ var pos = 0;
 
 
 // TODO: make other page work
-// TODO: fix crewmate right scroll
 
 document.addEventListener("DOMContentLoaded", function(event) {
     texts = document.getElementsByClassName("text");

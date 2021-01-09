@@ -4,7 +4,7 @@
 }
 
 .header {
-    font-size: 2em;
+    font-size: 2.5em;
     width: 100%;
     z-index: 999;
     grid-row: 1;
@@ -31,9 +31,9 @@
 }
 
 @media (min-width: 900px) {
-    .grid-container { grid-template-columns: repeat(3, 1fr); }
+    .grid-container { grid-template-columns: repeat(6, 1fr); }
     .title { 
-        font-size: 4em;
+        font-size: 3.5em;
     };
 }
 
@@ -47,10 +47,18 @@
     #amongus {
         margin-top: 1em;
     }
+
+    .small-title {
+        font-size: 3em; 
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
 }
 
 #container {
-    grid-column: 1/-1;
+    grid-column: 2/-1;
     grid-row: 2;
     margin-left: 5%;
 
@@ -67,4 +75,21 @@
 
 #amongus {
     overflow: hidden;
+}
+
+.small-title {
+    position: relative;
+    font-size: 4em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.text {
+    margin-top: 0.5em;
 }
