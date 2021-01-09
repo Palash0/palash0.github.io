@@ -1,14 +1,12 @@
 var texts = [];
-var n = 8;
 var pos = 0;
 
 
 // TODO: make other page work
+// TODO: fix crewmate right scroll
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    for(var i = 1; i <= n; ++i) {
-        texts.push(document.getElementById('text' + i.toString()));
-    }
+    texts = document.getElementsByClassName("text");
     setRandomColor();
 
     var interval = window.setInterval(handleAnimations, 10);
@@ -58,10 +56,10 @@ function handleAnimations() {
 
 
 window.addEventListener('scroll', function() {
-    var scrollY = (window.innerHeight + window.pageYOffset) % window.innerHeight;
+    var scrollY = window.pageYOffset;
     var ratio = 0.03 + scrollY / window.innerHeight;
 
-    for(var i = 0; i < n; ++i) {
+    for(var i = 0; i < texts.length; ++i) {
         if (i % 2 == 0) {
             // move right
             texts[i].style.left = delta(ratio) * window.innerWidth;
@@ -70,6 +68,14 @@ window.addEventListener('scroll', function() {
             // move left
             texts[i].style.right = delta(ratio) * window.innerWidth;
             texts[i].style['transform'] = "skewX(" + ratio * 20 + "deg)";
+        }
+    }
+
+    var text2 = document.getElementsByClassName('texts-page-2');
+    for(var i = 0; i < text2.length; ++i) {
+        if (i % 2 == 0) {
+            // move left
+            
         }
     }
 
