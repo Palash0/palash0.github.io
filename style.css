@@ -79,11 +79,13 @@
 
 #amongus {
     overflow: hidden;
+    z-index: -1;
+    position: relative;
 }
 
 .small-title {
     position: relative;
-    font-size: 4em;
+    font-size: 3.5em;
 }
 
 .italic {
@@ -96,4 +98,8 @@
 
 .text {
     margin-top: 0.5em;
+}
+
+.page2 {
+    z-index: 999;
 }
