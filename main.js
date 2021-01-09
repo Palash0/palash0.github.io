@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var ANIMATION_SPEED = 10;
     var interval = window.setInterval(handleAnimations, ANIMATION_SPEED);
+
     var media = window.matchMedia("(max-width: 900px)");
     handleResponsive(media);
     media.addListener(handleResponsive);
@@ -63,11 +64,11 @@ window.addEventListener('scroll', function() {
         if (i % 2 == 0) {
             // move right
             texts[i].style.left = delta(ratio) * window.innerWidth;
-            texts[i].style['transform'] = "skewX(-" + ratio * 20 + "deg)";
+            texts[i].style['transform'] = "skewX(-" + ratio * 10 + "deg)";
         } else {
             // move left
             texts[i].style.right = delta(ratio) * window.innerWidth;
-            texts[i].style['transform'] = "skewX(" + ratio * 20 + "deg)";
+            texts[i].style['transform'] = "skewX(" + ratio * 10 + "deg)";
         }
     }
 

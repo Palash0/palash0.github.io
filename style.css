@@ -26,12 +26,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 7%;
     grid-auto-rows: minmax(100px, auto);
 }
 
 @media (min-width: 900px) {
-    .grid-container { grid-template-columns: repeat(6, 1fr); }
+    .grid-container { grid-template-columns: repeat(8, 1fr); }
     .title { 
         font-size: 3.5em;
     };
@@ -42,6 +41,7 @@
         width: 100%;
         text-align: center;
         margin: 0 !important;
+        grid-column: 1/-1 !important;
     }
 
     #amongus {
@@ -49,11 +49,15 @@
     }
 
     .small-title {
-        font-size: 3em; 
+        font-size: 3.3em !important; 
     }
 
     .header {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    .text {
+        margin-top: 0.5em !important;
     }
 }
 
