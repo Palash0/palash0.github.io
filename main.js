@@ -84,7 +84,7 @@ window.addEventListener('scroll', function() {
 });
 
 function delta(progress) {
-    return 1.5 * progress * progress * progress;
+    return Math.pow(progress, 2.5);
 }
 
 function choose(choices) {
