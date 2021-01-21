@@ -108,3 +108,28 @@
     width: 100%;
 }
 
+#apple {
+    border-width: 5px;
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+body {
+    margin: 0;
+}
+
+/* #body-double {
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory; 
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+} */
+
+section {
+    scroll-snap-align: start;
+}
+
+html {
+    scroll-behavior: smooth;
+}
